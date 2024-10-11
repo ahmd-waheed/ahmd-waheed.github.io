@@ -4,42 +4,20 @@ layout: page
 ---
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
-<p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>I am a recent BE Aerospace graduate from <a href="https://nust.edu.pk/" target="_blank">National University of Sciences and Technology<a/>. During my four years I have demonstrated my academic excellence on different levels, most notable of which being the awardee of the: Rector's Gold Medal, Best Final Year Design Project, and Best Aircraft Design Award. I have a keen interest for robotics and automation and am committed towards fully harnessing the potential of aerial autonomy.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Currently I am working as a Design Engineer - Aircraft Stability and Controls at <a href="https://naqcode.com/" target="_blank">NaqCoDE<a/> technologies. Here I work on problems ranging from Flight Dynamic Modelling, Flight Controls, Simulations, and Hardware Integration. It is a congnitively stimulating experience where I get to see my Aerospace concepts in action.</p>
+
+<p>As for my commitment towards aerial robotics, I like to undertake projects of autonomous quadcopter flight. Most notable of these has been a solo venture where I designed a controller for a quadcopter, tested it in simulations, and implemented it at a hardware level using a Jetson Nano. The details of this undertaking can be found on my <a href="https://ahmd-waheed.github.io/projects/" target="_blank">projects<a/> page. This was the first step, taken by me, at my university campus to build towards autonomous agile vision-based quadcopter flight. The idea was to leave behind a solid platform and methodology to be adopted by future researchers to achieve this sophisticated aerial prowess. The hardware aspect of the project is inspired and based off the <a href="https://github.com/uzh-rpg/agilicious" target="_blank">Agilicious<a/> platform, an open-source framework provided by <a href="https://rpg.ifi.uzh.ch/" target="_blank">UZH's Robotics and Perception Group<a/>.</p>
+
+<p>I have been part of numerous leadership roles since my senior school years. I successfully lead my school team's programming department in the <a href="https://www.firstlegoleague.org/" target="_blank">First Lego League<a/> and <a href="https://first.global/" target="_blank">First Global Challenge<a/> to become National Champions and represent Pakistan twice in the USA. As a Sophomore, I lead the Electroadhesion department of team <a href="https://www.instagram.com/saf._.shikan_/" target="_blank">Saf-Shikan<a/> in the <a href="http://isssp.bit.edu.cn/en/n12/" target="_blank">International Space Science and Scientific Payload Competition<a/>. Last but not the least, I have also served as the President, and formerly also as the Vice President, of the <a href="https://www.instagram.com/theaviators.nust/" target="_blank">The Aviators<a/> society at NUST. I also possess a deep love for sports; especially Tennis, Cricket and Calisthenics.</p>
 
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>HTML - Jade - Haml - Erb</li>
-	<li>Responsive (Mobile First)</li>
-	<li>CSS (Stylus, Sass, Less)</li>
-	<li>Css Frameworks (Bootstrap, Foundation)</li>
-	<li>Javascript (Design Patterns, Tests)</li>
-	<li>AngularJS - ReactJS</li>
-	<li>Grunt - Gulp - Yeoman</li>
-	<li>Git</li>
-	<li>PHP</li>
-	<li>Python</li>
-	<li>MySQL - MongoDB</li>
-	<li>Scrum and Kanban</li>
-	<li>TDD e Continuous Integration</li>
-</ul>
-
-<h2>Projects</h2>
-
-<ul>
-	<li><a href="https://github.com/">Lorem Lorem</a></li>
-	<li><a href="https://github.com/">Ipsum Dolor</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
+	<li>Flight Dynamic Modelling</li>
+	<li>Flight Control</li>
+	<li>C++</li>
+	<li>MATLAB / Simulink</li>
+	<li>Computer Aided Design</li>
 </ul>
