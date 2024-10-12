@@ -14,6 +14,14 @@ layout: page
 
 <h2>Skills</h2>
 
+<div class="container">
+	<p>Flight Dynamic Modelling</p>
+	<p>Flight Control</p>
+	<p>C++</p>
+	<p>MATLAB / Simulink</p>
+	<p>Computer Aided Design</p>
+</div>
+
 <ul class="skill-list">
 	<li>Flight Dynamic Modelling</li>
 	<li>Flight Control</li>
