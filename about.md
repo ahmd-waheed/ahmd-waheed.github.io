@@ -19,13 +19,7 @@ layout: page
 	<p>Flight Control</p>
 	<p>C++</p>
 	<p>MATLAB / Simulink</p>
+	<p>Ubuntu OS</p>
+	<p>ROS</p>
 	<p>Computer Aided Design</p>
 </div>
-
-<ul class="skill-list">
-	<li>Flight Dynamic Modelling</li>
-	<li>Flight Control</li>
-	<li>C++</li>
-	<li>MATLAB / Simulink</li>
-	<li>Computer Aided Design</li>
-</ul>
