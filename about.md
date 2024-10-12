@@ -2,7 +2,7 @@
 title: About
 layout: page
 ---
-![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}){:class="selfie"}
+![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}){:class="about-image"}
 
 <p>I am a recent BE Aerospace graduate from <a href="https://nust.edu.pk/" target="_blank">National University of Sciences and Technology</a>. During my four years I have demonstrated my academic excellence on different levels, most notable of which being the awardee of the: Rector's Gold Medal, Best Final Year Design Project, and Best Aircraft Design Award. I have a keen interest for robotics and automation and am committed towards fully harnessing the potential of aerial autonomy.</p>
 
