@@ -14,7 +14,7 @@ tag:
 - Ubuntu OS
 - Docker
 category: project
-star: true
+star: false
 projects: true
 author: ahmedwaheed
 description: A Step Towards Autonomous Agile Flight Mastery
