@@ -2,8 +2,8 @@
 title: "Navigator"
 layout: post
 date: 2024-09-30 23:00
-image: /assets/images/navigator.jpg
-headerImage: false
+image: /assets/images/Navigator/Navigator.jpg
+headerImage: true
 tag:
 - Aerial Robotics
 - Modern Controls
