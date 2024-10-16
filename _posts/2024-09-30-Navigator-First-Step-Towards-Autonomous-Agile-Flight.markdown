@@ -21,22 +21,33 @@ author: ahmedwaheed
 description: A Step Towards Autonomous Agile Flight Mastery
 ---
 
-## Summary:
+## Introduction:
 
-You can pick as item to see how to apply in markdown.
+Navigator is the quadcopter of my final year design project, a solo venture lying at the intersection of modern control theory, flight dynamics modelling, aerial robotics, RC hobby, computer aided design, and design for additive manufacturing. It was a self-crafted research avenue that allowed me to fully experience controller development for aerial vehicles from scratch. It was a challenging and stimulating experience that required a good engineering knowledge from multiple disciplines. This was the first step, taken by me, at my university campus to build towards autonomous agile vision-based quadcopter flight. The idea was to leave behind a solid platform and methodology to be adopted by future researchers to achieve this sophisticated aerial prowess.
 
-#### Especial Elements
-- [Evidence](#evidence)
-- [Side-by-Side](#side-by-side)
-- [Star](#star)
-- [Especial Breaker](#especial-breaker)
-- [Spoiler](#spoiler)
+---
 
-#### External Elements
-- [Gist](#gist)
-- [Codepen](#codepen)
-- [Slideshare](#slideshare)
-- [Videos](#videos)
+#### Table of Contents
+<div class="side-by-side">
+    <div class="toleft">
+        <ul> 
+        <li>[Challenges of Aerial Flight](#evidence)</li>
+        <li>[Methodology and Proposed Philosophy](#side-by-side)</li>
+        <li>[Vehicle Dynamics Modelling](#star)</li>
+        <li>[Control Architecture Design](#especial-breaker)</li>
+        <li>[Towards Hardware Implementation](#spoiler)</li>
+        <li>[Hardware Implementation](#evidence)</li>
+        <li>[Future Work](#evidence)</li>
+        <li>[Conclusion](#evidence)</li>
+        <li>[Further Reading](#evidence)</li>
+        </ul>
+    </div>
+
+    <div class="toright">
+        <img class="image" src="https://ahmd-waheed.github.io/assets/images/profile.jpg" alt="Alt Text">
+        <figcaption class="caption">Photo by John Doe</figcaption>
+    </div>
+</div>
 
 ---
 
