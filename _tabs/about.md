@@ -9,7 +9,7 @@ lqip: ""
 {: .prompt-tip } -->
 <img src="/assets/img/about.jpg">
 
-<p>I am a recent BE Aerospace graduate from <a href="https://nust.edu.pk/" target="_blank">National University of Sciences and Technology</a>. During my four years I have demonstrated my academic excellence on different levels, most notable of which being the awardee of the: Rector's Gold Medal, Best Final Year Design Project, and Best Aircraft Design Award. I have a keen interest for robotics and automation and am committed towards fully harnessing the potential of aerial autonomy.</p>
+<p>I am a recent BE Aerospace graduate from <a href="https://nust.edu.pk/" target="_blank">National University of Sciences and Technology</a>. During my four years I have demonstrated my academic excellence on different levels, most notable of which being the awardee of the: President's Gold Medal, Rector's Gold Medal, and Best Aircraft Design Award. I have a keen interest for robotics and automation and am committed towards fully harnessing the potential of aerial autonomy.</p>
 
 <p>Currently I am working as a Design Engineer - Aircraft Stability and Controls at <a href="https://naqcode.com/" target="_blank">NaqCoDE technologies</a>. Here I work on problems ranging from Flight Dynamics Modelling, Flight Controls, Simulations, and Hardware Integration. It is a cognitively stimulating experience where I get to see my Aerospace concepts in action.</p>
 
