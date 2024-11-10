@@ -423,6 +423,7 @@ main {
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
+    white-space: nowrap;
 
     p {
       background: #222;
