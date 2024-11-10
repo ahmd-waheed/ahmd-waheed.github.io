@@ -1,6 +1,6 @@
 ---
 title: Navigator
-description: A Step Towards Autonomous Agile Flight Mastery.
+description: A Step Towards Autonomous Agile Flight Mastery
 author: ahmed
 date: 2024-09-30 12:00:00 +0800
 categories: [Projects, Aerial Robotics]
