@@ -30,7 +30,7 @@ The control problem of any aerial application lies at the heart of vehicle dynam
 
 ### Salient Features and Scope
 
- <ul>
+<ul>
   <li>Developing a deep understanding of control design philosophy</li>
   <li>Proposing a well researched methodology enabling agile quadcopter flight</li>
   <li>Flight Dynamics Modelling of a quadcopter plant for Model Based Design</li>
@@ -57,9 +57,49 @@ _Illustration of a general-purpose control design philosophy_
 
 ## Vehicle Dynamics Modelling
 
+There were two reasons to model my quadcopter’s dynamics. Firstly, to derive a plant model needed to test and tune the controller in simulation. Secondly, for the modelling of the controller itself. The need for the latter arises from the nature of the project goals.
+
+As explained in my paper, <a href="https://github.com/uzh-rpg/agilicious" target="_blank">Agilicious by ETH Zurich</a> was the platform chosen for the hardware implementation part of the project. Geared towards agile quadrotor research and harbouring substantial amount of work under its belt made it the go-to choice. To understand the control architecture of the platform better there was a need to work towards modern control theory concepts, Model Predictive Control in particular.
+
+To develop a sound understanding of the vehicle dynamics modelling and modern control system design, I followed these two courses by Mark Misin: <a href="https://www.udemy.com/course/applied-systems-control-for-engineers-modelling-pid-mpc/" target="_blank">Applied Control Systems 1</a> and <a href="https://www.udemy.com/course/applied-control-systems-for-engineers-2-uav-drone-control/" target="_blank">Applied Control Systems 3</a>. Both courses are very elaborate, clear and enabling in terms of their content.
+
+For vehicle dynamics modelling a solid understanding of the following concepts has been developed:
+<ul>
+  <li>Underactuated systems and associated limitations</li>
+  <li>Setting up of system control inputs for a quadcopter</li>
+  <li>Euler’s rotation theorem and its unique conventions</li>
+  <li>Rigorous mathematical and graphical investigation of relationship between Extrinsic and Intrinsic rotational conventions</li>
+  <li>Benefits of using the intrinsic approach for particular control problems</li>
+  <li>Derivation of the Newton Euler formulation for a 6-DOF rigid body system</li>
+  <li>Mathematical modelling of gravity, control inputs, and gyroscopic precession</li>
+  <li>Representing the obtained quadcopter specific equations of motion in the state space formulation</li>
+  <li>Formulation of a motor mixing algorithm with the help of the Blade Element Momentum theory</li>
+</ul> 
+
+If any of the topic interests you, then feel free to take a look at my course notes by clicking the image below. The notes especially go in great detail to investigate rotational matrices with hand done derivations; these are very important for any robotics project due to variety of frame systems that are simultaneously in play. Also, at the end of the notes you will find a list of all the assumptions taken and room for improvement that you may work on to make the plant model more accurate.
+
+<a href="{{site.url}}/assets/docs/navigator/navigator-FDM-notes.pdf" target="_blank">![FDM Notes Preview](/assets/img/navigator/navigator-FDM-notes-preview.png)</a>
+_Click to download the PDF for my FDM notes_
+
 ---
 
 ## Control Architecture Design
+
+This part of the project deals with a very important question. Given a flight path, how does a drone go about executing it? Following the coursework of Mark Misin, a control architecture of a feedback linearization outer-loop and a model predictive inner-loop controller (MPC) has been employed.
+
+![Control Architecture](/assets/img/navigator/controller-architecture.png)
+_Control Architecture_
+
+The feedback linearization, also known as “exact linearization”, is a non-linear control technique that transforms a non-linear system into a fully or partially decoupled linear one, without loss of any accuracy, so that linear control strategies may be used. Within this architecture this outer loop controller works as a position controller that computes the quadcopter orientation that is needed to get to the reference position provided by the planner.
+
+The inner-loop model predictive control receives the target attitude angles to produce the most optimum control commands for the scenario. It does this by planning in advance for a specified number of timesteps known as the horizon period. A set of optimization objectives are defined which are then used to minimize a mathematical cost function, over this finite horizon period, to determine the best system input. This is done in a receding horizon fashion. The inner-loop runs at a higher frequency to try and catch the reference set by the outer-loop. For this we say that the inner-loop has dynamics stronger than the outer-loop.
+
+The MPC controller needs equations of motion to make such predictions. If the attitude equations are visited in my course notes, then it is found that there are non-linearities present in them. To apply the formulations of a linear MPC controller to our non-linear set of equations, a two-fold process is used. First, the transfer matrix is simplified to simplify the EOMs from rates to Euler angles themselves. Secondly, linear parameter varying (LPV) is applied to put the EOMs into a linear format. The continuous set of equations are then discretised. Finally, a cost function is formulated, simplified, and solved for set goals.
+
+All of these steps are mathematically intensive and thus, I am including my course notes in this section for anyone who may be interested in reading further. It is a good read for anyone new to optimal and quadrotor control and the notes provide reasoning for all design choices made.
+
+<a href="{{site.url}}/assets/docs/navigator/navigator-controller-design-notes.pdf" target="_blank">![Controller Design Notes Preview](/assets/img/navigator/navigator-controller-design-notes-preview.png)</a>
+_Click to download the PDF for my controller design notes_
 
 ---
 
