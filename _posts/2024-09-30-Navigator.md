@@ -10,7 +10,7 @@ math: true
 mermaid: true
 image:
   path: /assets/img/navigator/navigator.jpg
-  lqip: 
+  lqip: /assets/lqip/navigator/navigator.jpg
   alt: 
 ---
 
@@ -50,7 +50,7 @@ The project began with the formulation of a novel and adaptable methodology, ser
 
 The resulting framework consolidates over 15 years of research, spanning early demonstrations of vision-based autonomous flight to recent milestones achieved in human vs algorithmic piloting abilities. It highlights key challenges such as perception-to-action dependence, domain shifts, and sensor limitations, offering innovative solutions like hybrid simulation-real-world approaches. Additionally, the framework evaluates potential drone platforms suited for hardware implementation, and that are geared towards research and development. This work was presented as a conference paper at the Smart Mobility and Logistics Ecosystems conference at KFUPM, published through a peer-reviewed process. For a graphical overview of the design philosophy refer to the image below. For a detailed treatment of the subject, you can read my conference paper using this <a href="https://doi.org/10.1016/j.trpro.2025.03.100" target="_blank">link</a>.
 
-![Philosophy Flowchart](/assets/img/navigator/control-design-philosophy.jpg)
+![Philosophy Flowchart](/assets/img/navigator/control-design-philosophy.jpg){: lqip="/assets/lqip/navigator/control-design-philosophy.jpg"}
 _Illustration of a general-purpose control design philosophy_
 
 ---
@@ -78,7 +78,7 @@ For vehicle dynamics modelling a solid understanding of the following concepts h
 
 If any of the topic interests you, then feel free to take a look at my course notes by clicking the image below. The notes especially go in great detail to investigate rotational matrices with hand done derivations; these are very important for any robotics project due to variety of frame systems that are simultaneously in play. Also, at the end of the notes you will find a list of all the assumptions taken and room for improvement that you may work on to make the plant model more accurate.
 
-![FDM Notes Preview](/assets/img/navigator/navigator-FDM-notes-preview.png)
+![FDM Notes Preview](/assets/img/navigator/navigator-FDM-notes-preview.png){: lqip="/assets/img/navigator/navigator-FDM-notes-preview.png"}
 _<a href="{{site.url}}/assets/docs/navigator/navigator-FDM-notes.pdf" target="_blank">Click to download the PDF for my FDM notes</a>_
 
 ---
@@ -87,7 +87,7 @@ _<a href="{{site.url}}/assets/docs/navigator/navigator-FDM-notes.pdf" target="_b
 
 This part of the project deals with a very important question. Given a flight path, how does a drone go about executing it? Following the coursework of Mark Misin, a control architecture of a feedback linearization outer-loop and a model predictive inner-loop controller (MPC) has been employed.
 
-![Control Architecture](/assets/img/navigator/controller-architecture.png)
+![Control Architecture](/assets/img/navigator/controller-architecture.png){: lqip="/assets/img/navigator/controller-architecture.png"}
 _Control Architecture_
 
 The feedback linearization, also known as “exact linearization”, is a non-linear control technique that transforms a non-linear system into a fully or partially decoupled linear one, without loss of any accuracy, so that linear control strategies may be used. Within this architecture this outer loop controller works as a position controller that computes the quadcopter orientation that is needed to get to the reference position provided by the planner.
@@ -98,7 +98,7 @@ The MPC controller needs equations of motion to make such predictions. If the at
 
 All of these steps are mathematically intensive and thus, I am including my course notes in this section for anyone who may be interested in reading further. It is a good read for anyone new to optimal and quadrotor control and the notes provide reasoning for all design choices made.
 
-![Controller Design Notes Preview](/assets/img/navigator/navigator-controller-design-notes-preview.png)
+![Controller Design Notes Preview](/assets/img/navigator/navigator-controller-design-notes-preview.png){: lqip="/assets/img/navigator/navigator-controller-design-notes-preview.png"}
 _<a href="{{site.url}}/assets/docs/navigator/navigator-controller-design-notes.pdf" target="_blank">Click to download the PDF for my controller design notes</a>_
 
 ---
@@ -109,12 +109,12 @@ Once designed there is a need to evaluate the performance and assess the potenti
 
 Developing a completely new controller and implementing it physically is an immensely challenging task; due to time constraints this isn’t within the scope of this project. It has been previously mentioned that the hardware platform chosen for this project is ETH Zurich’s Agilicious framework. Furthermore, the purpose of the analytically designed controller was to get a direct hand on with the important concepts that go into making one and better understand the adopted framework. Nonetheless, it would be exciting to see the engineered mathematics in action. For this I used the companion Python script provided by Mark Misin in his course and tweaked it to test a manoeuvring flight scenario.
 
-![Python Trajectory Tracking](/assets/img/navigator/controller-python-simulation.gif)
+![Python Trajectory Tracking](/assets/img/navigator/controller-python-simulation.gif){: lqip="/assets/lqip/navigator/controller-python-simulation.png"}
 _Model Predictive Control in action_
 
 The hardware phase of the project is a major one. It’s an assimilation of a lot of skills including but not limited to Ubuntu Operating System, Robot Operating System, Docker, CAD Modelling, Design for Additive Manufacturing, Additive Manufacturing, Betaflight Firmware, and Jetson Nano. Through continuous troubleshooting a very strong understanding for the involved frameworks was developed. This phase although involved development of software and hardware in parallel, for the purposes of this blog I will be presenting first the hardware fabrication portion, followed by a software development portion, and then finally an integration and testing portion.
 
-![Navigator](/assets/img/navigator/navigator-cyberpunk.gif)
+![Navigator](/assets/img/navigator/navigator-cyberpunk.gif){: lqip="/assets/lqip/navigator/navigator-cyberpunk.png"}
 _Navigator powered on_
 
 ---
@@ -142,7 +142,7 @@ Deviations caused due to these reasons necessitated fabrication of custom parts.
 
 All goals were successfully met! Due to the reproducible and empowering intent of the project, all CAD designs, alongside the complete quadcopter 3D model can be found on <a href="https://grabcad.com/library/navigator-3" target="_blank">GrabCAD</a>. The final weight of quadcopter came out to be 806g.
 
-![Wire Management](/assets/img/navigator/navigator-wire-management.jpg)
+![Wire Management](/assets/img/navigator/navigator-wire-management.jpg){: lqip="/assets/img/navigator/navigator-wire-management.jpg"}
 _Snug and well thought out wiring scheme for high speed flights_
 
 Just like the top plate, the GPS mount and Jetson protection cage designed for the project had salient features. The GPS mount required a clear view of the sky while ensuring minimal vibrations and drag at high speeds. The protection cage was designed to be breakable and modular in fashion. Breakable for high resilience and modular for easier replacements and easy access to the underlying Jetson Nano. The design provided excellent performance in protecting the processing unit during test flights.
