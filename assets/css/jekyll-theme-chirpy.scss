@@ -1,0 +1,29 @@
+---
+---
+
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+.round-bubble {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  white-space: nowrap;
+
+  p {
+    
+    width: max-content;
+    display: inline-block;
+    padding: 0px 10px;
+    border-radius: 15px;
+    border: 1px solid;
+    font-size: 1.08rem;
+    margin: 0;
+  }
+} 

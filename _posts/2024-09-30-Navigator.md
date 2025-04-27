@@ -109,7 +109,7 @@ Once designed there is a need to evaluate the performance and assess the potenti
 
 Developing a completely new controller and implementing it physically is an immensely challenging task; due to time constraints this isn’t within the scope of this project. It has been previously mentioned that the hardware platform chosen for this project is ETH Zurich’s Agilicious framework. Furthermore, the purpose of the analytically designed controller was to get a direct hand on with the important concepts that go into making one and better understand the adopted framework. Nonetheless, it would be exciting to see the engineered mathematics in action. For this I used the companion Python script provided by Mark Misin in his course and tweaked it to test a manoeuvring flight scenario.
 
-![Python Trajectory Tracking](/assets/vid/navigator/controller-python-simulation.mp4)
+![Python Trajectory Tracking](/assets/img/navigator/controller-python-simulation.gif)
 _Model Predictive Control in action_
 
 The hardware phase of the project is a major one. It’s an assimilation of a lot of skills including but not limited to Ubuntu Operating System, Robot Operating System, Docker, CAD Modelling, Design for Additive Manufacturing, Additive Manufacturing, Betaflight Firmware, and Jetson Nano. Through continuous troubleshooting a very strong understanding for the involved frameworks was developed. This phase although involved development of software and hardware in parallel, for the purposes of this blog I will be presenting first the hardware fabrication portion, followed by a software development portion, and then finally an integration and testing portion.
@@ -143,7 +143,7 @@ Deviations caused due to these reasons necessitated fabrication of custom parts.
 All goals were successfully met! Due to the reproducible and empowering intent of the project, all CAD designs, alongside the complete quadcopter 3D model can be found on <a href="https://grabcad.com/library/navigator-3" target="_blank">GrabCAD</a>. The final weight of quadcopter came out to be 806g.
 
 ![Wire Management](/assets/img/navigator/navigator-wire-management.jpg)
-_Snug and Well Thought Out Wiring Scheme for High Speed Flights_
+_Snug and well thought out wiring scheme for high speed flights_
 
 Just like the top plate, the GPS mount and Jetson protection cage designed for the project had salient features. The GPS mount required a clear view of the sky while ensuring minimal vibrations and drag at high speeds. The protection cage was designed to be breakable and modular in fashion. Breakable for high resilience and modular for easier replacements and easy access to the underlying Jetson Nano. The design provided excellent performance in protecting the processing unit during test flights.
 
