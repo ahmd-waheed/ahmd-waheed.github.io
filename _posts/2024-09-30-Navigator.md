@@ -163,7 +163,7 @@ In case you are looking for an extended list of components that I used in the pr
 
 ---
 
-## Software
+## Software Stack & Flight Code
 
 Much of the heavy lifting in this project lay not in hardware integration, but in the layered, intricate setup of the software stack that powered the quadcopter’s autonomy. While Agilicious provides a robust simulation and real-flight control framework, its deployment on non-standard embedded platforms like the Jetson Nano is far from plug-and-play.
 
@@ -239,8 +239,30 @@ Given the undocumented challenges and Jetson-specific edge cases involved, I may
 
 ## Flight Integration & Limitations
 
+With the software stack operational across Jetson Nano and my laptop, I moved to full system integration. Bench tests without propellers were conducted to assess controller response to a 1.5-meter hover command. Outdoors, altitude estimates fused from **GPS + barometer** by the firmware yielded stable results. Indoors, however, reliance on barometric data alone led to erratic readings; highly sensitive to wind wash, rendering hover control unreliable. To improve indoor estimation, I explored the possiblity of fusing barometer and IMU data. But Betaflight’s MAVLink stream lacked IMU output; source code inspection confirmed angular rates were hardcoded and linear accelerations missing. Without IMU access, meaningful fusion was blocked at the firmware level. Also, modification of Betaflight firmware wasn't in the scope of the project and thus this avenue wasn't explored further.
+
+An outdoor flight attempt followed. Arming via RViz showed no immediate response, but moments later Navigator unexpectedly took off — a misconfigured launch file had triggered the Agilicious backup pipeline. Navigator hovered stably for a few seconds, then slightly banked and slowly descended into a soft crash. No video or logs were captured due to the unanticipated take-off.
+
+Repairs and correcting the pipeline took the next day, but worsening weather forced me indoors for further testing. To ensure safety, I moored the drone. As anticipated from prior bench behavior, indoor flight was unstable. Without GPS, altitude estimation failed under barometric noise. A sneak peek into the flight test can be analyzed alongside barometric reading and collective thrust commands.
+
+{%
+  include embed/video.html
+  src='/assets/vid/indoor-flight.mp4'
+  poster='/assets/lqip/navigator/indoor-flight.png'
+  title='Navigator indoor flight testing'
+  autoplay=true
+  loop=true
+  muted=false
+%}
+
+The impact with the ceiling was strong which led to overheating of the Flight Controller in post flight equipment check. This was heartbreaking as I no longer had luxury of time to get hands on a new one and solder it onto Navigator before the project deadline. This flight, although seemingly short and abrupt, was a demonstration of reliable operation of telemetry links, ROS communications, and controller logic. I am positive that the degree of integration that I have performed for the project can deliver point to point autonomous outdoor navigation in GPS enabled environment. Betaflight firmwware modification was also highlighted as a major lead for future work enabling accurate state estimation.
+
 ---
 
 ## But Seriously, Why This Project?
+
+Because I think aerial robotics is awesome, control theory is fascinating, and because this project earned me the best final year project award :)
+
+![Convocation '24](/assets/img/navigator/best-fydp.png){: lqip="/assets/lqip/navigator/best-fydp.png"}
 
 ---
