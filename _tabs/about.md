@@ -7,7 +7,7 @@ lqip: ""
 
 <!-- > Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
 {: .prompt-tip } -->
-![Ahmed Waheed](/assets/img/about.jpg){: w="650" lqip="/assets/lqip/about.jpg"}
+![Ahmed Waheed](/assets/img/about.jpg){: lqip="/assets/lqip/about.jpg"}
 
 <p>I am a recent BE Aerospace graduate from <a href="https://nust.edu.pk/" target="_blank">National University of Sciences and Technology</a>. During my four years I have demonstrated my academic excellence on different levels, most notable of which being the awardee of the: President's Gold Medal, Rector's Gold Medal, and Best Aircraft Design Award. I have a keen interest for robotics and automation and am committed towards fully harnessing the potential of aerial autonomy.</p>
 
