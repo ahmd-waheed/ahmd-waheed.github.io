@@ -109,13 +109,27 @@ Once designed there is a need to evaluate the performance and assess the potenti
 
 Developing a completely new controller and implementing it physically is an immensely challenging task; due to time constraints this isn’t within the scope of this project. It has been previously mentioned that the hardware platform chosen for this project is ETH Zurich’s Agilicious framework. Furthermore, the purpose of the analytically designed controller was to get a direct hand on with the important concepts that go into making one and better understand the adopted framework. Nonetheless, it would be exciting to see the engineered mathematics in action. For this I used the companion Python script provided by Mark Misin in his course and tweaked it to test a manoeuvring flight scenario.
 
-![Python Trajectory Tracking](/assets/img/navigator/controller-python-simulation.gif){: w="100%" lqip="/assets/lqip/navigator/controller-python-simulation.jpg"}
-_Model Predictive Control in action_
+{%
+  include embed/video.html
+  src='/assets/vid/navigator/controller-python-simulation.mp4'
+  poster='/assets/lqip/navigator/controller-python-simulation.png'
+  title='Model Predictive Control in action'
+  autoplay=true
+  loop=true
+  muted=true
+%}
 
 The hardware phase of the project is a major one. It’s an assimilation of a lot of skills including but not limited to Ubuntu Operating System, Robot Operating System, Docker, CAD Modelling, Design for Additive Manufacturing, Additive Manufacturing, Betaflight Firmware, and Jetson Nano. Through continuous troubleshooting a very strong understanding for the involved frameworks was developed. This phase although involved development of software and hardware in parallel, for the purposes of this blog I will be presenting first the hardware fabrication portion, followed by a software development portion, and then finally an integration and testing portion.
 
-![Navigator](/assets/img/navigator/navigator-cyberpunk.gif){: w="100%" lqip="/assets/lqip/navigator/navigator-cyberpunk.jpg"}
-_Navigator powered on_
+{%
+  include embed/video.html
+  src='/assets/vid/navigator/navigator-cyberpunk.mp4'
+  poster='/assets/lqip/navigator/navigator-cyberpunk.png'
+  title='Navigator powered on'
+  autoplay=true
+  loop=true
+  muted=true
+%}
 
 ---
 
@@ -247,11 +261,11 @@ Repairs and correcting the pipeline took the next day, but worsening weather for
 
 {%
   include embed/video.html
-  src='/assets/vid/indoor-flight.mp4'
-  poster='/assets/lqip/navigator/'
+  src='/assets/vid/navigator/indoor-flight.mp4'
+  poster='/assets/lqip/navigator/indoor-flight.png'
   title='Navigator indoor flight testing'
-  autoplay=true
-  loop=true
+  autoplay=false
+  loop=false
   muted=false
 %}
 
